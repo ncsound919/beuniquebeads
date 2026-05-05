@@ -1,0 +1,4 @@
+node_modules/
+.playwright-state/
+site-screenshot*.png
+shopify-*.png
