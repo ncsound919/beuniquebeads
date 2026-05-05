@@ -195,7 +195,7 @@
     cartDrawer.innerHTML = [
       '<div class="cart-drawer-header">',
       '  <h3>Your Cart</h3>',
-      '  <button class="cart-drawer-close" aria-label="Close cart">&times;</button>',
+      '  <button type="button" class="cart-drawer-close" aria-label="Close cart">&times;</button>',
       '</div>',
       '<div class="cart-drawer-body">',
       '  <i class="fas fa-shopping-bag" aria-hidden="true"></i>',
@@ -277,25 +277,26 @@
 
       if (email === '') {
         newsletterMessage.textContent = 'Please enter your email address.';
-        newsletterMessage.style.color = '#B87C5A';
+        newsletterMessage.className = 'newsletter-message error';
         if (newsletterInput) newsletterInput.classList.add('error');
         return;
       }
 
       if (!isValidEmail(email)) {
         newsletterMessage.textContent = 'Please enter a valid email address.';
-        newsletterMessage.style.color = '#B87C5A';
+        newsletterMessage.className = 'newsletter-message error';
         if (newsletterInput) newsletterInput.classList.add('error');
         return;
       }
 
       if (newsletterInput) newsletterInput.classList.remove('error');
       newsletterMessage.textContent = 'Thank you! You\'ve been added to Toya\'s list. Check your inbox soon.';
-      newsletterMessage.style.color = '#9C5E3A';
+      newsletterMessage.className = 'newsletter-message success';
       newsletterForm.reset();
 
       setTimeout(function () {
         newsletterMessage.textContent = '';
+        newsletterMessage.className = 'newsletter-message';
       }, 6000);
     });
 

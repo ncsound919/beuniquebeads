@@ -744,6 +744,15 @@ section {
   font-weight: 500;
   min-height: 1.5em;
   transition: color 0.3s;
+  color: var(--terracotta);
+}
+
+.newsletter-message.error {
+  color: var(--clay);
+}
+
+.newsletter-message.success {
+  color: var(--terracotta);
 }
 
 /* ===== CONTACT ===== */
