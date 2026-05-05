@@ -7,7 +7,7 @@
       name: 'Golden Terra Wrap',
       price: '$148',
       tag: 'BESTSELLER',
-      img: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=700&h=700&fit=crop',
+      img: 'https://images.unsplash.com/photo-1611853904829-6d0f4034ce2f?w=700&h=700&fit=crop',
       alt: 'Layered golden beaded wrap bracelet with terracotta accents, laid on cream fabric',
       url: 'https://beuniquebeads.myshopify.com/products/golden-terra-wrap'
     },
@@ -15,7 +15,7 @@
       name: 'Amethyst Intention Necklace',
       price: '$195',
       tag: 'NEW',
-      img: 'https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=700&h=700&fit=crop',
+      img: 'https://images.unsplash.com/photo-1504218531034-0914083ad68d?w=700&h=700&fit=crop',
       alt: 'Amethyst gemstone pendant necklace with gold-filled chain, artisan handcrafted',
       url: 'https://beuniquebeads.myshopify.com/products/amethyst-intention-necklace'
     },
@@ -23,7 +23,7 @@
       name: 'Lunar Moonstone Hoops',
       price: '$88',
       tag: 'LIMITED',
-      img: 'https://images.unsplash.com/photo-1633624211032-701b1f3099ea?w=700&h=700&fit=crop',
+      img: 'https://images.unsplash.com/photo-1601387603639-387c75bdcb0d?w=700&h=700&fit=crop',
       alt: 'Moonstone bead hoop earrings with soft iridescent glow, delicate and elegant',
       url: 'https://beuniquebeads.myshopify.com/products/lunar-moonstone-hoops'
     },
@@ -31,7 +31,7 @@
       name: 'Rooted Earth Stack',
       price: '$125',
       tag: 'STAFF FAVE',
-      img: 'https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=700&h=700&fit=crop',
+      img: 'https://images.unsplash.com/photo-1503513270701-67f56ac2e4f6?w=700&h=700&fit=crop',
       alt: 'Stack of earthy beaded bracelets in sage, clay, and espresso tones, perfect for layering',
       url: 'https://beuniquebeads.myshopify.com/products/rooted-earth-stack'
     }
