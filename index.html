@@ -12,11 +12,9 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="BeUniqueBeads | Handcrafted Beaded Jewelry by Toya Skinner">
-  <meta property="og:description" content="One-of-a-kind handcrafted beaded jewelry made with intention by Toya Skinner in North Carolina. Ethical, unique, and made to last.">
+  <meta property="og:description" content="One-of-a-kind handcrafted beaded jewelry made with intention by Toya Skinner in North Carolina.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://ncsound919.github.io/beuniquebeads/img/toya-face.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/CE6E2397-374D-4B9A-A84A-F77A56A01443.jpg">
   <meta property="og:url" content="https://beuniquebeads.com/">
   <meta property="og:site_name" content="BeUniqueBeads">
 
@@ -24,9 +22,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="BeUniqueBeads | Handcrafted Jewelry by Toya Skinner">
   <meta name="twitter:description" content="One-of-a-kind handcrafted beaded jewelry made with intention in North Carolina.">
-  <meta name="twitter:image" content="https://ncsound919.github.io/beuniquebeads/img/toya-face.jpg">
+  <meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/CE6E2397-374D-4B9A-A84A-F77A56A01443.jpg">
 
-  <!-- Favicon (inline SVG) -->
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='11' r='5' fill='%23B87C5A'/><circle cx='10' cy='22' r='4.5' fill='%239C5E3A'/><circle cx='22' cy='22' r='4.5' fill='%239C5E3A'/></svg>">
 
   <!-- Schema.org -->
@@ -35,8 +33,7 @@
     "@context": "https://schema.org",
     "@type": "JewelryStore",
     "name": "BeUniqueBeads",
-    "image": "https://ncsound919.github.io/beuniquebeads/img/toya-face.jpg",
-    "description": "Handcrafted beaded jewelry made with intention by Toya Skinner in Wendell, North Carolina. Ethical, unique, and made to last.",
+    "description": "Handcrafted beaded jewelry made with intention by Toya Skinner in Wendell, North Carolina.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Wendell",
@@ -44,8 +41,7 @@
       "addressCountry": "US"
     },
     "telephone": "+12523338632",
-    "priceRange": "$48-$395",
-    "openingHours": "Mo-Fr 10:00-18:00",
+    "priceRange": "$15-$65",
     "founder": "Toya Skinner"
   }
   </script>
@@ -98,7 +94,7 @@
   <section class="hero">
     <div class="container hero-content">
       <div class="hero-text reveal">
-        <div class="hero-badge"><span>✦</span> HANDCRAFTED IN NORTH CAROLINA</div>
+        <div class="hero-badge"><span>&#10022;</span> HANDCRAFTED IN NORTH CAROLINA</div>
         <h1 class="hero-heading">Beads that carry <br>your story</h1>
         <p class="hero-description">One-of-a-kind jewelry hand-strung with love and intention by Toya Skinner.</p>
         <div class="hero-cta">
@@ -107,10 +103,13 @@
         </div>
       </div>
       <div class="hero-image reveal">
-        <img src="img/hero-main.png"
-             width="900" height="1250"
-             fetchpriority="high"
-             alt="Handcrafted afrocentric beaded jewelry by BeUniqueBeads &mdash; artisan necklace on warm background">
+        <!-- Primary hero: uses real Shopify product image as hero so it always loads -->
+        <img
+          src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/CE6E2397-374D-4B9A-A84A-F77A56A01443.jpg"
+          width="900"
+          height="900"
+          fetchpriority="high"
+          alt="Hit the Dice Bangle - handcrafted beaded jewelry by BeUniqueBeads, Toya Skinner NC artisan">
       </div>
       <div class="floating-label"><i class="fas fa-heart"></i> Limited Heritage Collection</div>
     </div>
@@ -122,17 +121,17 @@
       <h2 class="section-title reveal">Made with Soul</h2>
       <div class="values">
         <div class="value-card reveal">
-          <span class="value-icon">🪡</span>
+          <span class="value-icon">&#129525;</span>
           <h3>Hand-Strung by Toya</h3>
           <p>Every bead chosen and strung with care in her North Carolina studio.</p>
         </div>
         <div class="value-card reveal">
-          <span class="value-icon">🌿</span>
+          <span class="value-icon">&#127807;</span>
           <h3>Ethically Sourced</h3>
           <p>Gold-filled, sterling silver &amp; responsibly sourced gemstones.</p>
         </div>
         <div class="value-card reveal">
-          <span class="value-icon">🌟</span>
+          <span class="value-icon">&#127775;</span>
           <h3>Truly One-of-a-Kind</h3>
           <p>Your jewelry becomes part of your personal legacy.</p>
         </div>
@@ -140,24 +139,132 @@
     </div>
   </section>
 
-  <!-- PRODUCTS -->
+  <!-- PRODUCTS — fully static HTML, no JS dependency for images -->
   <section id="collections" class="bg-ivory">
     <div class="container">
       <h2 class="section-title reveal">Signature Pieces</h2>
       <div class="product-grid" id="productGrid">
-        <!-- Populated by main.js -->
-      </div>
-<noscript>
-        <div class="product-grid">
-          <div class="product-card"><div class="product-image"><img src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/2CFB213D-A6D4-4E06-A157-562310F6066C.jpg" width="700" height="700" alt="2 pc Black and Red Dice Set" loading="lazy"></div><div class="product-info"><h3>2 pc Black and Red Dice Set</h3><div class="product-price">$46</div><a href="https://beuniquebeads.myshopify.com/products/2-pc-black-and-red-dice-set" class="btn btn-primary btn-block" target="_blank">View Piece</a></div></div>
-          <div class="product-card"><div class="product-image"><img src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/CE6E2397-374D-4B9A-A84A-F77A56A01443.jpg" width="700" height="700" alt="Hit the Dice Bangle" loading="lazy"></div><div class="product-info"><h3>Hit the Dice Bangle</h3><div class="product-price">$65</div><a href="https://beuniquebeads.myshopify.com/products/hit-the-dice-bangle" class="btn btn-primary btn-block" target="_blank">View Piece</a></div></div>
-          <div class="product-card"><div class="product-image"><img src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/216E93A3-373F-4F48-B215-359913CC2C1D.jpg" width="700" height="700" alt="Double the Love Starburst Bracelet" loading="lazy"></div><div class="product-info"><h3>Double the Love Starburst Bracelet</h3><div class="product-price">$22</div><a href="https://beuniquebeads.myshopify.com/products/double-the-love-starburst-bracelet" class="btn btn-primary btn-block" target="_blank">View Piece</a></div></div>
-          <div class="product-card"><div class="product-image"><img src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/7ED73C3F-A521-41AC-920E-361A78534A65.jpg" width="700" height="700" alt="Come On Dice Earrings" loading="lazy"></div><div class="product-info"><h3>Come On Dice Earrings</h3><div class="product-price">$20</div><a href="https://beuniquebeads.myshopify.com/products/come-on-dice" class="btn btn-primary btn-block" target="_blank">View Piece</a></div></div>
-          <div class="product-card"><div class="product-image"><img src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/09C1EDF4-E7C6-45D8-8514-FE3BBD96D9BC.jpg" width="700" height="700" alt="April Love Bracelet" loading="lazy"></div><div class="product-info"><h3>April Love Bracelet</h3><div class="product-price">$15</div><a href="https://beuniquebeads.myshopify.com/products/april-love" class="btn btn-primary btn-block" target="_blank">View Piece</a></div></div>
-          <div class="product-card"><div class="product-image"><img src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/B80E954B-C4A8-4F8B-BF85-556AEEC6D8B1.jpg" width="700" height="700" alt="Build a Bear Bracelet" loading="lazy"></div><div class="product-info"><h3>Build a Bear Bracelet</h3><div class="product-price">$15</div><a href="https://beuniquebeads.myshopify.com/products/untitled-mar16_22-22" class="btn btn-primary btn-block" target="_blank">View Piece</a></div></div>
-          <div class="product-card"><div class="product-image"><img src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/C22C90FE-AFA6-45F6-8F70-78281398EE77.jpg" width="700" height="700" alt="Stardust Earrings" loading="lazy"></div><div class="product-info"><h3>Stardust Earrings</h3><div class="product-price">$20</div><a href="https://beuniquebeads.myshopify.com/products/untitled-mar16_22-26" class="btn btn-primary btn-block" target="_blank">View Piece</a></div></div>
+
+        <div class="product-card reveal">
+          <div class="product-image">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/2CFB213D-A6D4-4E06-A157-562310F6066C.jpg"
+              width="700" height="700"
+              loading="eager"
+              alt="2 pc Black and Red Dice Set — gold-filled earrings and bracelet by BeUniqueBeads">
+          </div>
+          <div class="product-info">
+            <h3>2 pc Black and Red Dice Set</h3>
+            <div class="product-price">$46</div>
+            <div class="product-tag">SET</div>
+            <a href="https://beuniquebeads.myshopify.com/products/2-pc-black-and-red-dice-set"
+               class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">View Piece</a>
+          </div>
         </div>
-      </noscript>
+
+        <div class="product-card reveal">
+          <div class="product-image">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/CE6E2397-374D-4B9A-A84A-F77A56A01443.jpg"
+              width="700" height="700"
+              loading="eager"
+              alt="Hit the Dice Bangle — black and white dice chunky gold-filled beads bracelet">
+          </div>
+          <div class="product-info">
+            <h3>Hit the Dice Bangle</h3>
+            <div class="product-price">$65</div>
+            <div class="product-tag">STATEMENT</div>
+            <a href="https://beuniquebeads.myshopify.com/products/hit-the-dice-bangle"
+               class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">View Piece</a>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-image">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/216E93A3-373F-4F48-B215-359913CC2C1D.jpg"
+              width="700" height="700"
+              loading="lazy"
+              alt="Double the Love Starburst Bracelet — 14K gold-filled beaded with stardust beads">
+          </div>
+          <div class="product-info">
+            <h3>Double the Love Starburst Bracelet</h3>
+            <div class="product-price">$22</div>
+            <div class="product-tag">BESTSELLER</div>
+            <a href="https://beuniquebeads.myshopify.com/products/double-the-love-starburst-bracelet"
+               class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">View Piece</a>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-image">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/7ED73C3F-A521-41AC-920E-361A78534A65.jpg"
+              width="700" height="700"
+              loading="lazy"
+              alt="Come On Dice Earrings — red and black dice with gold-filled beads">
+          </div>
+          <div class="product-info">
+            <h3>Come On Dice Earrings</h3>
+            <div class="product-price">$20</div>
+            <div class="product-tag">EARRINGS</div>
+            <a href="https://beuniquebeads.myshopify.com/products/come-on-dice"
+               class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">View Piece</a>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-image">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/09C1EDF4-E7C6-45D8-8514-FE3BBD96D9BC.jpg"
+              width="700" height="700"
+              loading="lazy"
+              alt="April Love Bracelet — autism awareness gold-filled bracelet sizes 6-8 inches">
+          </div>
+          <div class="product-info">
+            <h3>April Love Bracelet</h3>
+            <div class="product-price">$15</div>
+            <div class="product-tag">AWARENESS</div>
+            <a href="https://beuniquebeads.myshopify.com/products/april-love"
+               class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">View Piece</a>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-image">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/B80E954B-C4A8-4F8B-BF85-556AEEC6D8B1.jpg"
+              width="700" height="700"
+              loading="lazy"
+              alt="Build a Bear Bracelet — elegant gold-filled charm bracelet sizes 6-7.5 inches">
+          </div>
+          <div class="product-info">
+            <h3>Build a Bear Bracelet</h3>
+            <div class="product-price">$15</div>
+            <div class="product-tag">NEW</div>
+            <a href="https://beuniquebeads.myshopify.com/products/untitled-mar16_22-22"
+               class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">View Piece</a>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-image">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0818/0406/7051/files/C22C90FE-AFA6-45F6-8F70-78281398EE77.jpg"
+              width="700" height="700"
+              loading="lazy"
+              alt="Stardust Earrings — brown medium earrings with gold-filled beads">
+          </div>
+          <div class="product-info">
+            <h3>Stardust Earrings</h3>
+            <div class="product-price">$20</div>
+            <div class="product-tag">EARRINGS</div>
+            <a href="https://beuniquebeads.myshopify.com/products/untitled-mar16_22-26"
+               class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">View Piece</a>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -166,23 +273,28 @@
     <div class="container">
       <h2 class="custom-cta-heading">Create Something Truly Yours</h2>
       <p class="custom-cta-text">Work directly with Toya on a custom commission that reflects your energy and story.</p>
-      <a href="#contact" class="btn btn-block btn-white">Start Your Custom Piece →</a>
+      <a href="#contact" class="btn btn-block btn-white">Start Your Custom Piece &rarr;</a>
     </div>
-</section>
+  </section>
 
   <!-- ABOUT -->
   <section id="about">
     <div class="container about-split">
       <div class="reveal">
-        <img class="about-image" src="img/toya-face.jpg" width="600" height="600" loading="lazy" alt="Toya Skinner, founder of BeUniqueBeads, handcrafted jewelry artisan">
+        <img class="about-image"
+             src="img/toya-face.jpg"
+             width="600" height="600"
+             loading="lazy"
+             alt="Toya Skinner, founder of BeUniqueBeads, handcrafted jewelry artisan in Wendell NC"
+             onerror="this.src='https://cdn.shopify.com/s/files/1/0818/0406/7051/files/09C1EDF4-E7C6-45D8-8514-FE3BBD96D9BC.jpg';this.onerror=null;">
       </div>
       <div class="reveal">
         <span class="about-label">THE ARTISAN</span>
         <h2 class="about-heading">Hi, I&rsquo;m Toya Skinner</h2>
         <p class="about-text">For over a decade I&rsquo;ve been creating jewelry that celebrates individuality and intention. Each piece is born in my North Carolina studio &mdash; hand-strung with love, prayer, and decades of experience.</p>
         <div class="about-contact">
-          <a href="tel:+12523338632">📞 (252) 333-8632</a>
-          <a href="mailto:hello@beuniquebeads.com">✉️ hello@beuniquebeads.com</a>
+          <a href="tel:+12523338632">&#128222; (252) 333-8632</a>
+          <a href="mailto:hello@beuniquebeads.com">&#9993;&#65039; hello@beuniquebeads.com</a>
           <p class="about-note">*Email address will be activated soon</p>
         </div>
       </div>
