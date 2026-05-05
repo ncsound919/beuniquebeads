@@ -1,0 +1,13 @@
+{
+  "email": "mrs.sassy1978@yahoo.com",
+  "password": "Chloe1978!!!!",
+  "accountTag": "b6be9bcf3d76c4d78ddb019a22d91720",
+  "zoneTag": "beuniquebeads.com",
+  "dnsRecords": [
+    {"type":"A","name":"@","content":"185.199.108.153","ttl":0,"priority":0,"proxied":true},
+    {"type":"A","name":"@","content":"185.199.109.153","ttl":0,"priority":0,"proxied":true},
+    {"type":"A","name":"@","content":"185.199.110.153","ttl":0,"priority":0,"proxied":true},
+    {"type":"A","name":"@","content":"185.199.111.153","ttl":0,"priority":0,"proxied":true},
+    {"type":"CNAME","name":"www","content":"ncsound919.github.io","ttl":0,"priority":0,"proxied":true}
+  ]
+}
