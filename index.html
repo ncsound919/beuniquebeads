@@ -7,8 +7,29 @@
   <meta name="description" content="Discover soulful handcrafted beaded jewelry by Toya Skinner in North Carolina. One-of-a-kind necklaces, bracelets, earrings made with intention, gold-filled, and ethically sourced gemstones. Custom commissions available.">
   <meta name="keywords" content="handcrafted beaded jewelry, artisan jewelry North Carolina, Toya Skinner, custom beaded necklaces, ethical gemstones, beaded bracelets, unique gifts">
   <meta name="author" content="Toya Skinner | BeUniqueBeads">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://beuniquebeads.com/">
 
-  <!-- Schema.org markup -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="BeUniqueBeads | Handcrafted Beaded Jewelry by Toya Skinner">
+  <meta property="og:description" content="One-of-a-kind handcrafted beaded jewelry made with intention by Toya Skinner in North Carolina. Ethical, unique, and made to last.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://beuniquebeads.com/">
+  <meta property="og:site_name" content="BeUniqueBeads">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BeUniqueBeads | Handcrafted Jewelry by Toya Skinner">
+  <meta name="twitter:description" content="One-of-a-kind handcrafted beaded jewelry made with intention in North Carolina.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0">
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='11' r='5' fill='%23B87C5A'/><circle cx='10' cy='22' r='4.5' fill='%239C5E3A'/><circle cx='22' cy='22' r='4.5' fill='%239C5E3A'/></svg>">
+
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,450 +50,43 @@
   }
   </script>
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <style>
-    :root {
-      --cream: #FFFBF5;
-      --ivory: #F5EDE4;
-      --clay: #B87C5A;
-      --terracotta: #9C5E3A;
-      --espresso: #2C211B;
-      --gold: #D4B88A;
-    }
-
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--cream);
-      color: #2C211B;
-      line-height: 1.7;
-    }
-
-    h1, h2, h3 { 
-      font-family: 'Playfair Display', Georgia, serif; 
-      font-weight: 700; 
-      letter-spacing: -0.04em; 
-    }
-
-    .container { 
-      max-width: 1480px; 
-      margin: 0 auto; 
-      padding: 0 clamp(1.5rem, 5vw, 4rem); 
-    }
-
-    .skip-link {
-      position: absolute;
-      left: -9999px;
-      top: 1rem;
-      z-index: 2000;
-      padding: 0.75rem 1.5rem;
-      background: var(--espresso);
-      color: white;
-      border-radius: 9999px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: none;
-    }
-    .skip-link:focus {
-      left: 1rem;
-      outline: 2px solid var(--gold);
-      outline-offset: 2px;
-    }
-
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background: rgba(255,251,245,0.96);
-      backdrop-filter: blur(24px);
-      z-index: 1000;
-      border-bottom: 1px solid rgba(184,124,90,0.2);
-      transition: all 0.4s ease;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.6rem 0;
-    }
-
-    .logo { font-size: 2rem; font-weight: 800; letter-spacing: -1px; color: var(--espresso); text-decoration: none; }
-
-    .nav-links { display: flex; gap: 3.2rem; font-weight: 500; }
-    .nav-link {
-      color: #3F2E25;
-      text-decoration: none;
-      position: relative;
-    }
-    .nav-link:after {
-      content: ''; position: absolute; width: 0; height: 2px; bottom: -6px; left: 0;
-      background: var(--clay); transition: width 0.4s ease;
-    }
-    .nav-link:hover:after { width: 100%; }
-
-    .nav-actions { display: flex; align-items: center; gap: 1.8rem; }
-    .hamburger { 
-      display: none; 
-      font-size: 1.8rem; 
-      cursor: pointer; 
-      background: none; 
-      border: none;
-    }
-
-    .btn {
-      padding: 15px 34px;
-      border-radius: 9999px;
-      font-weight: 600;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      cursor: pointer;
-    }
-
-    .btn-block { display: flex; width: 100%; }
-
-    .btn-primary {
-      background: var(--clay);
-      color: white;
-    }
-    .btn-primary:hover {
-      background: var(--terracotta);
-      transform: translateY(-4px);
-    }
-    .btn-primary:focus-visible {
-      outline: 2px solid var(--gold);
-      outline-offset: 2px;
-    }
-
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100vh;
-      background: var(--cream);
-      z-index: 1100;
-      padding: 7rem 2rem 2rem;
-      transition: left 0.4s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .mobile-menu.active { left: 0; }
-    .mobile-menu a {
-      font-size: 1.5rem;
-      color: var(--espresso);
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .mobile-menu .btn { width: fit-content; }
-    .close-menu {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      font-size: 2rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      background: linear-gradient(135deg, #FFFBF5 0%, #F0E4D2 100%);
-      overflow: hidden;
-      padding-top: calc(6rem + 2vw);
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 70% 30%, rgba(184,124,90,0.12) 0%, transparent 60%),
-                  url('https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=2000&fit=crop');
-      background-size: cover;
-      mix-blend-mode: multiply;
-      opacity: 0.08;
-    }
-
-    .hero-content {
-      display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: 7rem;
-      align-items: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-text h1 {
-      font-size: clamp(3.6rem, 8vw, 6.2rem);
-      line-height: 1.02;
-      margin-bottom: 1.4rem;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: rgba(156,94,58,0.1);
-      color: var(--terracotta);
-      padding: 12px 26px;
-      border-radius: 9999px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 1.8rem;
-    }
-
-    .hero-cta { display: flex; gap: 1.2rem; flex-wrap: wrap; }
-
-    .hero-image {
-      position: relative;
-      border-radius: 3.5rem;
-      overflow: hidden;
-      box-shadow: 0 40px 90px -20px rgba(44,33,27,0.35);
-      aspect-ratio: 4 / 5;
-    }
-
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 1.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .hero-image:hover img { transform: scale(1.07); }
-
-    .floating-label {
-      position: absolute;
-      bottom: 5%;
-      right: -2%;
-      background: white;
-      padding: 1rem 2rem;
-      border-radius: 2.5rem;
-      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      white-space: nowrap;
-      z-index: 10;
-    }
-
-    section { padding: 8rem 0; }
-
-    .section-title {
-      font-size: clamp(2.6rem, 6vw, 3.8rem);
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .values, .product-grid, .journal-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 3rem;
-    }
-
-    .value-card, .product-card, .journal-card {
-      background: white;
-      border-radius: 2.75rem;
-      overflow: hidden;
-      transition: all 0.6s ease;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.06);
-    }
-
-    .value-card:hover, .product-card:hover, .journal-card:hover {
-      transform: translateY(-25px);
-      box-shadow: 0 40px 80px rgba(184,124,90,0.22);
-    }
-
-    .value-icon { font-size: 4rem; margin-bottom: 1.8rem; display: block; }
-
-    .product-image, .journal-image {
-      overflow: hidden;
-      position: relative;
-    }
-    .product-image { height: 420px; }
-    .journal-image { height: 260px; }
-
-    .product-image img, .journal-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.9s ease;
-    }
-
-    .product-card:hover img, .journal-card:hover img { transform: scale(1.12); }
-
-    .product-info, .journal-info {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .product-info h3 { margin-bottom: 0.6rem; }
-    .product-price {
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: var(--terracotta);
-      margin: 0.5rem 0;
-    }
-    .product-tag {
-      background: var(--clay);
-      color: white;
-      padding: 6px 18px;
-      border-radius: 9999px;
-      font-size: 0.8rem;
-      display: inline-block;
-      margin-top: 0.5rem;
-    }
-
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 2.5rem;
-      margin-top: 3rem;
-    }
-    .testimonial-card {
-      background: white;
-      padding: 2.5rem;
-      border-radius: 2rem;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.07);
-      font-style: italic;
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-
-    .custom-cta {
-      background: linear-gradient(135deg, #2C211B, #3F2E25);
-      color: white;
-      text-align: center;
-      border-radius: 3.5rem;
-      padding: 5rem 2rem;
-      margin: 0 1.5rem;
-    }
-    .custom-cta .container { max-width: 760px; margin: 0 auto; }
-
-    .about-split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 7rem;
-      align-items: center;
-    }
-
-    .newsletter {
-      background: var(--ivory);
-      padding: 5rem 0;
-      text-align: center;
-    }
-    .newsletter-form {
-      max-width: 460px;
-      margin: 2rem auto 0;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .newsletter-form input {
-      flex: 1;
-      min-width: 200px;
-      padding: 16px 20px;
-      border-radius: 9999px;
-      border: 1px solid var(--gold);
-      background: white;
-      font-family: 'Inter', sans-serif;
-    }
-    .newsletter-message {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      color: var(--terracotta);
-      font-weight: 500;
-    }
-
-    footer {
-      background: var(--espresso);
-      color: #d4c3b0;
-      padding: 6rem 0 3rem;
-      text-align: center;
-    }
-    .social-links a {
-      color: #d4c3b0;
-      font-size: 1.8rem;
-      margin: 0 12px;
-      transition: color 0.3s;
-      display: inline-block;
-    }
-    .social-links a:hover { color: var(--gold); }
-    .social-links a:focus-visible {
-      outline: 2px solid var(--gold);
-      outline-offset: 2px;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    .visually-hidden {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      padding: 0;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      border: 0;
-    }
-
-    @media (max-width: 1024px) {
-      .hero-content { grid-template-columns: 1fr; gap: 4rem; text-align: center; }
-      .hero-cta { justify-content: center; }
-      .nav-links { display: none; }
-      .hamburger { display: block; }
-      .about-split { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
-    }
-    @media (max-width: 768px) {
-      .floating-label { padding: 0.6rem 1.2rem; font-size: 0.8rem; white-space: normal; right: 0; bottom: 2%; }
-    }
-    @media (max-width: 480px) {
-      .floating-label { right: auto; left: 50%; transform: translateX(-50%); bottom: 0; white-space: nowrap; font-size: 0.7rem; padding: 0.4rem 1rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header>
+<header class="site-header">
   <div class="container nav">
     <a href="#" class="logo">BeUniqueBeads</a>
-    <div class="nav-links">
+    <nav class="nav-links" aria-label="Main navigation">
       <a href="#collections" class="nav-link">Collections</a>
       <a href="#about" class="nav-link">Our Story</a>
       <a href="#journal" class="nav-link">Journal</a>
       <a href="#contact" class="nav-link">Contact</a>
-    </div>
+    </nav>
     <div class="nav-actions">
       <a href="https://beuniquebeads.myshopify.com/collections/all" class="btn btn-primary">Shop Now</a>
-      <button id="cartButton" class="cart-icon-btn" aria-label="Shopping cart" style="background:none; border:none; font-size:1.6rem; cursor:pointer;">
+      <button type="button" id="cartButton" class="cart-icon-btn" aria-label="Shopping cart">
         <i class="fas fa-shopping-bag" aria-hidden="true"></i>
       </button>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">☰</button>
+      <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
     </div>
   </div>
 </header>
 
-<div class="mobile-menu" id="mobileMenu">
-  <button class="close-menu" id="closeMenuBtn" aria-label="Close menu">✕</button>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button type="button" class="close-menu" id="closeMenuBtn" aria-label="Close menu">
+    <i class="fas fa-times" aria-hidden="true"></i>
+  </button>
   <a href="#collections">Collections</a>
   <a href="#about">Our Story</a>
   <a href="#journal">Journal</a>
@@ -482,249 +96,200 @@
 
 <main id="main-content" tabindex="-1">
 
+  <!-- HERO -->
   <section class="hero">
     <div class="container hero-content">
       <div class="hero-text reveal">
         <div class="hero-badge"><span>✦</span> HANDCRAFTED IN NORTH CAROLINA</div>
-        <h1>Beads that carry<br>your story</h1>
-        <p style="font-size:1.4rem; color:#5C4633; max-width:560px;">One-of-a-kind jewelry hand-strung with love and intention by Toya Skinner.</p>
+        <h1 class="hero-heading">Beads that carry<br>your story</h1>
+        <p class="hero-description">One-of-a-kind jewelry hand-strung with love and intention by Toya Skinner.</p>
         <div class="hero-cta">
-          <a href="https://beuniquebeads.myshopify.com/collections/all" class="btn btn-primary" style="padding:18px 46px;">Explore Collections</a>
-          <a href="#about" class="btn" style="background:transparent; border:2px solid #3F2E25; color:#3F2E25;">Meet Toya</a>
+          <a href="https://beuniquebeads.myshopify.com/collections/all" class="btn btn-primary btn-lg">Explore Collections</a>
+          <a href="#about" class="btn btn-outline">Meet Toya</a>
         </div>
       </div>
       <div class="hero-image reveal">
-        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900&h=1250&fit=crop" width="900" height="1250" alt="Artisan beaded jewelry piece – layered gemstone necklace and bracelet on warm cream background">
+        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900&h=1250&fit=crop"
+             width="900" height="1250"
+             fetchpriority="high"
+             alt="Artisan beaded jewelry piece &mdash; layered gemstone necklace and bracelet on warm cream background">
       </div>
-      <div class="floating-label"><i class="fas fa-heart" style="color:var(--clay);"></i> Limited Heritage Collection</div>
+      <div class="floating-label"><i class="fas fa-heart"></i> Limited Heritage Collection</div>
     </div>
   </section>
 
-  <section style="background:white;">
+  <!-- VALUES -->
+  <section class="bg-white">
     <div class="container">
       <h2 class="section-title reveal">Made with Soul</h2>
       <div class="values">
-        <div class="value-card reveal"><div class="value-icon">🪡</div><h3>Hand-Strung by Toya</h3><p>Every bead chosen and strung with care in her North Carolina studio.</p></div>
-        <div class="value-card reveal"><div class="value-icon">🌿</div><h3>Ethically Sourced</h3><p>Gold-filled, sterling silver & responsibly sourced gemstones.</p></div>
-        <div class="value-card reveal"><div class="value-icon">🌟</div><h3>Truly One-of-a-Kind</h3><p>Your jewelry becomes part of your personal legacy.</p></div>
+        <div class="value-card reveal">
+          <span class="value-icon">🪡</span>
+          <h3>Hand-Strung by Toya</h3>
+          <p>Every bead chosen and strung with care in her North Carolina studio.</p>
+        </div>
+        <div class="value-card reveal">
+          <span class="value-icon">🌿</span>
+          <h3>Ethically Sourced</h3>
+          <p>Gold-filled, sterling silver &amp; responsibly sourced gemstones.</p>
+        </div>
+        <div class="value-card reveal">
+          <span class="value-icon">🌟</span>
+          <h3>Truly One-of-a-Kind</h3>
+          <p>Your jewelry becomes part of your personal legacy.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="collections" style="background:var(--ivory);">
+  <!-- PRODUCTS -->
+  <section id="collections" class="bg-ivory">
     <div class="container">
       <h2 class="section-title reveal">Signature Pieces</h2>
-      <div class="product-grid" id="productGrid"></div>
+      <div class="product-grid" id="productGrid">
+        <!-- Populated by main.js -->
+      </div>
+      <noscript>
+        <div class="product-grid">
+          <div class="product-card">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=700&h=700&fit=crop" width="700" height="700" alt="Layered golden beaded wrap bracelet" loading="lazy"></div>
+            <div class="product-info"><h3>Golden Terra Wrap</h3><div class="product-price">$148</div><a href="https://beuniquebeads.myshopify.com/products/golden-terra-wrap" class="btn btn-primary btn-block">View Piece</a></div>
+          </div>
+          <div class="product-card">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=700&h=700&fit=crop" width="700" height="700" alt="Amethyst gemstone pendant necklace" loading="lazy"></div>
+            <div class="product-info"><h3>Amethyst Intention Necklace</h3><div class="product-price">$195</div><a href="https://beuniquebeads.myshopify.com/products/amethyst-intention-necklace" class="btn btn-primary btn-block">View Piece</a></div>
+          </div>
+          <div class="product-card">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1633624211032-701b1f3099ea?w=700&h=700&fit=crop" width="700" height="700" alt="Moonstone bead hoop earrings" loading="lazy"></div>
+            <div class="product-info"><h3>Lunar Moonstone Hoops</h3><div class="product-price">$88</div><a href="https://beuniquebeads.myshopify.com/products/lunar-moonstone-hoops" class="btn btn-primary btn-block">View Piece</a></div>
+          </div>
+          <div class="product-card">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=700&h=700&fit=crop" width="700" height="700" alt="Stack of earthy beaded bracelets" loading="lazy"></div>
+            <div class="product-info"><h3>Rooted Earth Stack</h3><div class="product-price">$125</div><a href="https://beuniquebeads.myshopify.com/products/rooted-earth-stack" class="btn btn-primary btn-block">View Piece</a></div>
+          </div>
+        </div>
+      </noscript>
     </div>
   </section>
 
+  <!-- CUSTOM CTA -->
   <section class="custom-cta">
     <div class="container">
-      <h2 style="font-size:clamp(2rem,5vw,3.4rem); margin-bottom:1.5rem;">Create Something Truly Yours</h2>
-      <p style="font-size:1.2rem; opacity:0.9;">Work directly with Toya on a custom commission that reflects your energy and story.</p>
-      <a href="#contact" class="btn btn-primary btn-block" style="background:white; color:var(--espresso); margin-top:2rem; max-width:320px; margin-left:auto; margin-right:auto;">Start Your Custom Piece →</a>
+      <h2 class="custom-cta-heading">Create Something Truly Yours</h2>
+      <p class="custom-cta-text">Work directly with Toya on a custom commission that reflects your energy and story.</p>
+      <a href="#contact" class="btn btn-block btn-white">Start Your Custom Piece →</a>
     </div>
   </section>
 
-  <section id="journal" style="background:white;">
+  <!-- JOURNAL -->
+  <section id="journal" class="bg-white">
     <div class="container">
       <h2 class="section-title reveal">From the Journal</h2>
       <div class="journal-grid">
         <div class="journal-card reveal">
-          <div class="journal-image"><img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&h=400&fit=crop" width="600" height="400" loading="lazy" alt="Close-up of hands stringing colorful glass beads on thread – artisan jewelry making process"></div>
-          <div class="journal-info"><h3>The Art of Hand-Stringing</h3><p>Why every bead is placed with intention — a peek inside Toya's studio.</p><a href="#" class="btn btn-primary btn-block" style="margin-top:1rem;">Read More</a></div>
+          <div class="journal-image">
+            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&h=400&fit=crop" width="600" height="400" loading="lazy" alt="Close-up of hands stringing colorful glass beads on thread &mdash; artisan jewelry making process">
+          </div>
+          <div class="journal-info">
+            <h3>The Art of Hand-Stringing</h3>
+            <p>Why every bead is placed with intention &mdash; a peek inside Toya&rsquo;s studio.</p>
+            <button type="button" class="btn btn-primary btn-block" data-journal="stringing">Read More</button>
+          </div>
         </div>
         <div class="journal-card reveal">
-          <div class="journal-image"><img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&h=400&fit=crop" width="600" height="400" loading="lazy" alt="Selection of raw gemstones: amethyst, rose quartz, and turquoise laid on natural wood"></div>
-          <div class="journal-info"><h3>Gemstone Meanings & Energy</h3><p>How to choose stones that align with your intentions.</p><a href="#" class="btn btn-primary btn-block" style="margin-top:1rem;">Read More</a></div>
+          <div class="journal-image">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&h=400&fit=crop" width="600" height="400" loading="lazy" alt="Selection of raw gemstones: amethyst, rose quartz, and turquoise laid on natural wood">
+          </div>
+          <div class="journal-info">
+            <h3>Gemstone Meanings &amp; Energy</h3>
+            <p>How to choose stones that align with your intentions.</p>
+            <button type="button" class="btn btn-primary btn-block" data-journal="gemstones">Read More</button>
+          </div>
         </div>
         <div class="journal-card reveal">
-          <div class="journal-image"><img src="https://images.unsplash.com/photo-1605647540924-8439e1f2f5b9?w=600&h=400&fit=crop" width="600" height="400" loading="lazy" alt="Woman smiling while holding a handwritten note and a beaded bracelet – customer story"></div>
-          <div class="journal-info"><h3>Heirloom Stories: A Customer's Journey</h3><p>How a custom piece became a family treasure.</p><a href="#" class="btn btn-primary btn-block" style="margin-top:1rem;">Read More</a></div>
+          <div class="journal-image">
+            <img src="https://images.unsplash.com/photo-1605647540924-8439e1f2f5b9?w=600&h=400&fit=crop" width="600" height="400" loading="lazy" alt="Woman smiling while holding a handwritten note and a beaded bracelet &mdash; customer story">
+          </div>
+          <div class="journal-info">
+            <h3>Heirloom Stories: A Customer&rsquo;s Journey</h3>
+            <p>How a custom piece became a family treasure.</p>
+            <button type="button" class="btn btn-primary btn-block" data-journal="heirlooms">Read More</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section style="background:var(--ivory);">
+  <!-- TESTIMONIALS -->
+  <section class="bg-ivory">
     <div class="container">
       <h2 class="section-title reveal">Loved by Our Community</h2>
       <div class="testimonial-grid">
-        <div class="testimonial-card reveal">"Toya's pieces feel alive. I wear my bracelet every single day. The quality and intention behind every bead is unmatched." &mdash; <strong>Sarah P., Raleigh, NC</strong></div>
-        <div class="testimonial-card reveal">"My custom necklace is my most treasured piece. It came with the most beautiful handwritten note from Toya. This is wearable art." &mdash; <strong>Michelle T., Charleston, SC</strong></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container about-split">
-      <div class="reveal"><img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=800&h=1050&fit=crop" width="800" height="1050" style="border-radius:3rem; width:100%;" alt="Toya Skinner, artisan jewelry maker, smiling in her North Carolina studio with beads and tools"></div>
-      <div class="reveal">
-        <span style="color:var(--clay); font-weight:600; letter-spacing:3px; font-size:0.95rem;">THE ARTISAN</span>
-        <h2 style="font-size:clamp(2rem,5vw,3.3rem); margin:1.4rem 0 2rem;">Hi, I'm Toya Skinner</h2>
-        <p style="font-size:1.2rem; line-height:1.8;">For over a decade I've been creating jewelry that celebrates individuality and intention. Each piece is born in my North Carolina studio — hand-strung with love, prayer, and decades of experience.</p>
-        <div style="margin-top:3rem; font-size:1.1rem;">
-          <a href="tel:+12523338632" style="display:block; margin-bottom:1rem; color:inherit;">📞 (252) 333-8632</a>
-          <a href="mailto:hello@beuniquebeads.com" style="color:inherit;">✉️ hello@beuniquebeads.com</a>
-          <p style="font-size:0.8rem; margin-top:1rem;">*Email address will be activated soon</p>
+        <div class="testimonial-card reveal">
+          &ldquo;Toya&rsquo;s pieces feel alive. I wear my bracelet every single day. The quality and intention behind every bead is unmatched.&rdquo; &mdash; <strong>Sarah P., Raleigh, NC</strong>
+        </div>
+        <div class="testimonial-card reveal">
+          &ldquo;My custom necklace is my most treasured piece. It came with the most beautiful handwritten note from Toya. This is wearable art.&rdquo; &mdash; <strong>Michelle T., Charleston, SC</strong>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container about-split">
+      <div class="reveal">
+        <img class="about-image" src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=800&h=1050&fit=crop" width="800" height="1050" loading="lazy" alt="Toya Skinner, artisan jewelry maker, smiling in her North Carolina studio with beads and tools">
+      </div>
+      <div class="reveal">
+        <span class="about-label">THE ARTISAN</span>
+        <h2 class="about-heading">Hi, I&rsquo;m Toya Skinner</h2>
+        <p class="about-text">For over a decade I&rsquo;ve been creating jewelry that celebrates individuality and intention. Each piece is born in my North Carolina studio &mdash; hand-strung with love, prayer, and decades of experience.</p>
+        <div class="about-contact">
+          <a href="tel:+12523338632">📞 (252) 333-8632</a>
+          <a href="mailto:hello@beuniquebeads.com">✉️ hello@beuniquebeads.com</a>
+          <p class="about-note">*Email address will be activated soon</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
   <section class="newsletter">
     <div class="container">
-      <h2 style="margin-bottom:1rem;">Stay Connected</h2>
-      <p style="max-width:520px; margin:0 auto 2rem; color:#5C4633;">Receive early access to new drops, bead stories from Toya, and exclusive offers.</p>
-      <form id="newsletterForm" class="newsletter-form">
+      <h2 class="newsletter-heading">Stay Connected</h2>
+      <p class="newsletter-description">Receive early access to new drops, bead stories from Toya, and exclusive offers.</p>
+      <form id="newsletterForm" class="newsletter-form" novalidate>
         <label for="news_email" class="visually-hidden">Email address</label>
-        <input type="email" id="news_email" placeholder="Your email address" required>
+        <input type="email" id="news_email" placeholder="Your email address" required autocomplete="email">
         <button type="submit" class="btn btn-primary">Subscribe</button>
       </form>
       <div id="newsletterMessage" class="newsletter-message" aria-live="polite"></div>
     </div>
   </section>
 
-  <section id="contact" style="background:white; padding:4rem 0;">
-    <div class="container" style="text-align:center;">
-      <h2>Let's Create Together</h2>
-      <p style="margin-top:1rem;">Have a question or custom idea? Reach out anytime.</p>
-      <div style="margin-top:2rem;">
-        <a href="mailto:hello@beuniquebeads.com" class="btn btn-primary">hello@beuniquebeads.com</a>
-      </div>
+  <!-- CONTACT -->
+  <section id="contact" class="bg-white contact-section">
+    <div class="container">
+      <h2>Let&rsquo;s Create Together</h2>
+      <p>Have a question or custom idea? Reach out anytime.</p>
+      <a href="mailto:hello@beuniquebeads.com" class="btn btn-primary">hello@beuniquebeads.com</a>
     </div>
   </section>
 
 </main>
 
-<footer>
+<footer class="site-footer">
   <div class="container">
-    <div class="social-links" style="margin-bottom:2rem;">
-      <a href="#" aria-label="Instagram (coming soon)"><i class="fab fa-instagram"></i></a>
-      <a href="#" aria-label="Pinterest (coming soon)"><i class="fab fa-pinterest"></i></a>
-      <a href="#" aria-label="TikTok (coming soon)"><i class="fab fa-tiktok"></i></a>
+    <div class="social-links">
+      <button type="button" class="social-btn" aria-label="Instagram (coming soon)"><i class="fab fa-instagram"></i></button>
+      <button type="button" class="social-btn" aria-label="Pinterest (coming soon)"><i class="fab fa-pinterest"></i></button>
+      <button type="button" class="social-btn" aria-label="TikTok (coming soon)"><i class="fab fa-tiktok"></i></button>
     </div>
-    <p style="opacity:0.75;">© 2026 BeUniqueBeads • Handcrafted with love by Toya Skinner in Wendell, North Carolina</p>
+    <p>&copy; 2026 BeUniqueBeads &bull; Handcrafted with love by Toya Skinner in Wendell, North Carolina</p>
   </div>
 </footer>
 
-<script>
-  const products = [
-    {
-      name: "Golden Terra Wrap",
-      price: "$148",
-      tag: "BESTSELLER",
-      img: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=700&h=700&fit=crop",
-      alt: "Layered golden beaded wrap bracelet with terracotta accents, laid on cream fabric",
-      url: "https://beuniquebeads.myshopify.com/products/golden-terra-wrap"
-    },
-    {
-      name: "Amethyst Intention Necklace",
-      price: "$195",
-      tag: "NEW",
-      img: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=700&h=700&fit=crop",
-      alt: "Amethyst gemstone pendant necklace with gold-filled chain, artisan handcrafted",
-      url: "https://beuniquebeads.myshopify.com/products/amethyst-intention-necklace"
-    },
-    {
-      name: "Lunar Moonstone Hoops",
-      price: "$88",
-      tag: "LIMITED",
-      img: "https://images.unsplash.com/photo-1633624211032-701b1f3099ea?w=700&h=700&fit=crop",
-      alt: "Moonstone bead hoop earrings with soft iridescent glow, delicate and elegant",
-      url: "https://beuniquebeads.myshopify.com/products/lunar-moonstone-hoops"
-    },
-    {
-      name: "Rooted Earth Stack",
-      price: "$125",
-      tag: "STAFF FAVE",
-      img: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=700&h=700&fit=crop",
-      alt: "Stack of earthy beaded bracelets in sage, clay, and espresso tones, perfect for layering",
-      url: "https://beuniquebeads.myshopify.com/products/rooted-earth-stack"
-    }
-  ];
-
-  const productGrid = document.getElementById('productGrid');
-  if (productGrid) {
-    productGrid.innerHTML = products.map(p => `
-      <div class="product-card reveal">
-        <div class="product-image">
-          <img src="${p.img}" width="700" height="700" alt="${p.alt}" loading="lazy">
-        </div>
-        <div class="product-info">
-          <h3>${p.name}</h3>
-          <div class="product-price">${p.price}</div>
-          ${p.tag ? `<div class="product-tag">${p.tag}</div>` : ''}
-          <a href="${p.url}" class="btn btn-primary btn-block" style="margin-top:1.5rem;" target="_blank" rel="noopener noreferrer">View Piece</a>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  const hamburger = document.getElementById('hamburgerBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const closeMenuBtn = document.getElementById('closeMenuBtn');
-
-  function toggleMenu(open) {
-    const isOpen = open !== undefined ? open : !mobileMenu.classList.contains('active');
-    mobileMenu.classList.toggle('active', isOpen);
-    hamburger.setAttribute('aria-expanded', isOpen);
-    if (isOpen) {
-      closeMenuBtn.focus();
-    } else {
-      hamburger.focus();
-    }
-  }
-
-  if (hamburger && mobileMenu) {
-    hamburger.addEventListener('click', () => toggleMenu());
-    closeMenuBtn.addEventListener('click', () => toggleMenu(false));
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => toggleMenu(false));
-    });
-  }
-
-  const cartButton = document.getElementById('cartButton');
-  if (cartButton) {
-    cartButton.addEventListener('click', () => {
-      alert("🛍️ Cart functionality coming soon. For now, use the 'Shop Now' button.");
-    });
-  }
-
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  reveals.forEach(el => observer.observe(el));
-
-  const newsletterForm = document.getElementById('newsletterForm');
-  const newsletterMessage = document.getElementById('newsletterMessage');
-  if (newsletterForm && newsletterMessage) {
-    newsletterForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = document.getElementById('news_email').value.trim();
-      if (email === "") {
-        newsletterMessage.textContent = "Please enter a valid email address.";
-        newsletterMessage.style.color = "#B87C5A";
-        return;
-      }
-      newsletterMessage.textContent = "✨ Thank you! You've been added to Toya's list. Check your inbox soon. ✨";
-      newsletterMessage.style.color = "#9C5E3A";
-      newsletterForm.reset();
-      setTimeout(() => { newsletterMessage.textContent = ""; }, 5000);
-    });
-  }
-
-  document.querySelectorAll('.social-links a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-    });
-  });
-</script>
+<script src="main.js"></script>
 </body>
 </html>
