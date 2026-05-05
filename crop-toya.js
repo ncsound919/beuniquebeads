@@ -1,27 +1,27 @@
 const sharp = require('sharp');
 const path = require('path');
 
-const inputPath = path.join(__dirname, 'img', 'toya.jpg');
-const outputPath = path.join(__dirname, 'img', 'toya-face.jpg');
+async function cropToya() {
+  const input = 'img/toya.jpg';
+  const output = 'img/toya-face.jpg';
+  
+  const metadata = await sharp(input).metadata();
+  console.log('Original:', metadata.width, 'x', metadata.height);
+  
+  // Calculate face region (center crop removing gray background)
+  const size = Math.min(metadata.width, metadata.height);
+  const left = Math.floor((metadata.width - size) / 2);
+  const top = Math.floor((metadata.height - size) / 2);
+  
+  await sharp(input)
+    .extract({ left, top, width: size, height: size })
+    .resize(941, 941)
+    .jpeg({ quality: 95 })
+    .toFile(output);
+  
+  const outMeta = await sharp(output).metadata();
+  console.log('Cropped:', outMeta.width, 'x', outMeta.height);
+  console.log('Saved to:', output);
+}
 
-(async () => {
-  const metadata = await sharp(inputPath).metadata();
-  const { width, height } = metadata;
-  console.log(`Original: ${width}x${height}`);
-
-  // Crop to face - square from the top-center (upper 45% of image)
-  // For a portrait, face is typically in the upper portion
-  const cropSize = Math.min(width, Math.round(height * 0.55));
-  const left = Math.round((width - cropSize) / 2);
-  const top = 0;
-
-  console.log(`Cropping to: ${cropSize}x${cropSize} from (${left}, ${top})`);
-
-  await sharp(inputPath)
-    .extract({ left, top, width: cropSize, height: cropSize })
-    .resize(600, 600, { fit: 'cover' })
-    .jpeg({ quality: 85 })
-    .toFile(outputPath);
-
-  console.log('Saved:', outputPath);
-})();
+cropToya().catch(console.error);

@@ -55,7 +55,7 @@
       name: 'Stardust Earrings',
       price: '$20',
       tag: 'EARRINGS',
-      img: 'img/march 16 #2.webp',
+      img: 'img/stardust-earrings.webp',
       alt: 'Stardust earrings — brown medium earrings with gold-filled beads',
       url: 'https://beuniquebeads.myshopify.com/products/untitled-mar16_22-26'
     }
