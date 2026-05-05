@@ -4,36 +4,60 @@
   /* ===== PRODUCT DATA ===== */
   var products = [
     {
-      name: 'Golden Terra Wrap',
-      price: '$148',
+      name: 'Hit the Dice Bangle',
+      price: '$65',
+      tag: 'STATEMENT',
+      img: 'img/hit the dice bangie.webp',
+      alt: 'Hit the Dice Bangle — black and white dice with chunky gold-filled beads bracelet',
+      url: 'https://beuniquebeads.myshopify.com/products/hit-the-dice-bangle'
+    },
+    {
+      name: '2 pc Black and Red Dice Set',
+      price: '$46',
+      tag: 'SET',
+      img: 'img/2pc black and red dice.webp',
+      alt: '2 pc black and red dice set — gold-filled earrings and bracelet',
+      url: 'https://beuniquebeads.myshopify.com/products/2-pc-black-and-red-dice-set'
+    },
+    {
+      name: 'Double the Love Starburst Bracelet',
+      price: '$22',
       tag: 'BESTSELLER',
-      img: 'https://images.unsplash.com/photo-1611853904829-6d0f4034ce2f?w=700&h=700&fit=crop',
-      alt: 'Layered golden beaded wrap bracelet with terracotta accents, laid on cream fabric',
-      url: 'https://beuniquebeads.myshopify.com/products/golden-terra-wrap'
+      img: 'img/double the love.webp',
+      alt: 'Double the Love starburst bracelet — 14K gold-filled beaded with stardust beads',
+      url: 'https://beuniquebeads.myshopify.com/products/double-the-love-starburst-bracelet'
     },
     {
-      name: 'Amethyst Intention Necklace',
-      price: '$195',
+      name: 'Come On Dice Earrings',
+      price: '$20',
+      tag: 'EARRINGS',
+      img: 'img/come on dice.webp',
+      alt: 'Come on dice earrings — red and black dice with gold-filled beads',
+      url: 'https://beuniquebeads.myshopify.com/products/come-on-dice'
+    },
+    {
+      name: 'April Love Bracelet',
+      price: '$15',
+      tag: 'AWARENESS',
+      img: 'img/april love.webp',
+      alt: 'April Love autism awareness bracelet — gold-filled, sizes 6–8 inches',
+      url: 'https://beuniquebeads.myshopify.com/products/april-love'
+    },
+    {
+      name: 'Build a Bear Bracelet',
+      price: '$15',
       tag: 'NEW',
-      img: 'https://images.unsplash.com/photo-1504218531034-0914083ad68d?w=700&h=700&fit=crop',
-      alt: 'Amethyst gemstone pendant necklace with gold-filled chain, artisan handcrafted',
-      url: 'https://beuniquebeads.myshopify.com/products/amethyst-intention-necklace'
+      img: 'img/march 16.webp',
+      alt: 'Build a Bear gold-filled bracelet — elegant charm bracelet, sizes 6–7.5 inches',
+      url: 'https://beuniquebeads.myshopify.com/products/untitled-mar16_22-22'
     },
     {
-      name: 'Lunar Moonstone Hoops',
-      price: '$88',
-      tag: 'LIMITED',
-      img: 'https://images.unsplash.com/photo-1601387603639-387c75bdcb0d?w=700&h=700&fit=crop',
-      alt: 'Moonstone bead hoop earrings with soft iridescent glow, delicate and elegant',
-      url: 'https://beuniquebeads.myshopify.com/products/lunar-moonstone-hoops'
-    },
-    {
-      name: 'Rooted Earth Stack',
-      price: '$125',
-      tag: 'STAFF FAVE',
-      img: 'https://images.unsplash.com/photo-1503513270701-67f56ac2e4f6?w=700&h=700&fit=crop',
-      alt: 'Stack of earthy beaded bracelets in sage, clay, and espresso tones, perfect for layering',
-      url: 'https://beuniquebeads.myshopify.com/products/rooted-earth-stack'
+      name: 'Stardust Earrings',
+      price: '$20',
+      tag: 'EARRINGS',
+      img: 'img/march 16 #2.webp',
+      alt: 'Stardust earrings — brown medium earrings with gold-filled beads',
+      url: 'https://beuniquebeads.myshopify.com/products/untitled-mar16_22-26'
     }
   ];
 
