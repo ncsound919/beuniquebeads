@@ -1,7 +1,0 @@
-{
-  "version": 2,
-  "name": "beuniquebeads",
-  "builds": [
-    { "src": "**", "use": "@vercel/static" }
-  ]
-}
