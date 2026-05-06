@@ -59,9 +59,6 @@
 </head>
 <body>
 
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="site-header">
@@ -80,34 +77,64 @@
       <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
         <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
-      </div>
     </div>
-    <div class="scroll-indicator">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button type="button" class="close-menu" id="closeMenuBtn" aria-label="Close menu">
+    <i class="fas fa-times" aria-hidden="true"></i>
+  </button>
+  <a href="#collections">Collections</a>
+  <a href="#about">Our Story</a>
+  <a href="#contact">Contact</a>
+  <a href="https://beuniquebeads.myshopify.com/collections/all" class="btn btn-primary">Shop Now</a>
+</div>
+
+<main id="main-content" tabindex="-1">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text reveal">
+        <div class="hero-badge"><span>✦</span> HANDCRAFTED IN NORTH CAROLINA</div>
+        <h1 class="hero-heading">Beads that carry <br>your story</h1>
+        <p class="hero-description">One-of-a-kind jewelry hand-strung with love and intention by Toya Skinner.</p>
+        <div class="hero-cta">
+          <a href="https://beuniquebeads.myshopify.com/collections/all" class="btn btn-primary btn-lg">Explore Collections</a>
+          <a href="#about" class="btn btn-outline">Meet Toya</a>
+        </div>
+      </div>
+      <div class="hero-image reveal">
+        <img src="img/hero-main.png"
+             width="900" height="1250"
+             fetchpriority="high"
+             alt="Handcrafted afrocentric beaded jewelry by BeUniqueBeads &mdash; artisan necklace on warm background">
+      </div>
+      <div class="floating-label"><i class="fas fa-heart"></i> Limited Heritage Collection</div>
     </div>
   </section>
 
   <!-- VALUES -->
-  <section class="values-section">
+  <section class="bg-white">
     <div class="container">
       <h2 class="section-title reveal">Made with Soul</h2>
-      <div class="gold-divider"></div>
       <div class="values">
         <div class="value-card reveal">
           <span class="value-icon">🪡</span>
-          <h3>Hand-Strung with Love</h3>
+          <h3>Hand-Strung by Toya</h3>
           <p>Every bead chosen and strung with care in her North Carolina studio.</p>
         </div>
         <div class="value-card reveal">
           <span class="value-icon">🌿</span>
-          <h3>Truly One-of-a-Kind</h3>
-          <p>Your jewelry becomes part of your personal legacy.</p>
-        </div>
-        <div class="value-card reveal">
-          <span class="value-icon">✨</span>
           <h3>Ethically Sourced</h3>
           <p>Gold-filled, sterling silver &amp; responsibly sourced gemstones.</p>
+        </div>
+        <div class="value-card reveal">
+          <span class="value-icon">🌟</span>
+          <h3>Truly One-of-a-Kind</h3>
+          <p>Your jewelry becomes part of your personal legacy.</p>
         </div>
       </div>
     </div>
@@ -116,10 +143,7 @@
   <!-- PRODUCTS -->
   <section id="collections" class="bg-ivory">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title reveal">Signature Pieces</h2>
-        <a href="https://beuniquebeads.myshopify.com/collections/all" class="shop-all-link reveal">Shop all →</a>
-      </div>
+      <h2 class="section-title reveal">Signature Pieces</h2>
       <div class="product-grid" id="productGrid">
         <!-- Populated by main.js -->
       </div>
@@ -201,10 +225,6 @@
   </div>
 </footer>
 
-<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/split-type@0.3.4/umd/index.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

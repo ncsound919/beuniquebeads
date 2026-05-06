@@ -195,8 +195,188 @@
     mobileMenuLinks.forEach(function (link) {
       link.addEventListener('click', function () {
         toggleMenu(false);
-});
+      });
+    });
+  }
+
+  /* ===== CART DRAWER ===== */
+  var cartButton = document.getElementById('cartButton');
+  var cartOverlay = null;
+  var cartDrawer = null;
+  var cartCloseBtn = null;
+
+  function createCartDrawer() {
+    cartOverlay = document.createElement('div');
+    cartOverlay.className = 'cart-overlay';
+    cartOverlay.setAttribute('aria-hidden', 'true');
+
+    cartDrawer = document.createElement('div');
+    cartDrawer.className = 'cart-drawer';
+    cartDrawer.setAttribute('role', 'dialog');
+    cartDrawer.setAttribute('aria-modal', 'true');
+    cartDrawer.setAttribute('aria-label', 'Shopping cart');
+
+    cartDrawer.innerHTML = [
+      '<div class="cart-drawer-header">',
+      '  <h3>Your Cart</h3>',
+      '  <button type="button" class="cart-drawer-close" aria-label="Close cart">&times;</button>',
+      '</div>',
+      '<div class="cart-drawer-body">',
+      '  <i class="fas fa-shopping-bag" aria-hidden="true"></i>',
+      '  <p>Browse our full collection on Shopify to add items to your cart.</p>',
+      '  <a href="https://beuniquebeads.myshopify.com/collections/all" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Shop Now</a>',
+      '</div>'
+    ].join('');
+
+    document.body.appendChild(cartOverlay);
+    document.body.appendChild(cartDrawer);
+
+    cartCloseBtn = cartDrawer.querySelector('.cart-drawer-close');
+
+    function closeCart() {
+      cartOverlay.classList.remove('active');
+      cartOverlay.setAttribute('aria-hidden', 'true');
+      cartDrawer.classList.remove('active');
+      document.removeEventListener('keydown', cartKeyHandler);
+      if (cartButton) cartButton.focus();
+    }
+
+    function cartKeyHandler(event) {
+      if (event.key === 'Escape') {
+        closeCart();
+      }
+    }
+
+    cartCloseBtn.addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', closeCart);
+
+    return {
+      open: function () {
+        cartOverlay.classList.add('active');
+        cartOverlay.setAttribute('aria-hidden', 'false');
+        cartDrawer.classList.add('active');
+        document.addEventListener('keydown', cartKeyHandler);
+        if (cartCloseBtn) cartCloseBtn.focus();
+      },
+      close: closeCart
+    };
+  }
+
+  var cartController = createCartDrawer();
+
+  if (cartButton) {
+    cartButton.addEventListener('click', function () {
+      cartController.open();
+    });
+  }
+
+  /* ===== ESCAPE KEY: Close Modals ===== */
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      var overlayActive =
+        (cartOverlay && cartOverlay.classList.contains('active')) ||
+        (mobileMenu && mobileMenu.classList.contains('active'));
+      if (overlayActive) {
+        if (cartOverlay && cartOverlay.classList.contains('active')) {
+          cartController.close();
+        }
+        closeMobileMenu();
+      }
+    }
   });
+
+  /* ===== NEWSLETTER ===== */
+  var newsletterForm = document.getElementById('newsletterForm');
+  var newsletterMessage = document.getElementById('newsletterMessage');
+  var newsletterInput = document.getElementById('news_email');
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+  }
+
+  if (newsletterForm && newsletterMessage) {
+    newsletterForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var email = newsletterInput ? newsletterInput.value.trim() : '';
+
+      if (email === '') {
+        newsletterMessage.textContent = 'Please enter your email address.';
+        newsletterMessage.className = 'newsletter-message error';
+        if (newsletterInput) newsletterInput.classList.add('error');
+        return;
+      }
+
+      if (!isValidEmail(email)) {
+        newsletterMessage.textContent = 'Please enter a valid email address.';
+        newsletterMessage.className = 'newsletter-message error';
+        if (newsletterInput) newsletterInput.classList.add('error');
+        return;
+      }
+
+      if (newsletterInput) newsletterInput.classList.remove('error');
+      newsletterMessage.textContent = 'Thank you! You\'ve been added to Toya\'s list. Check your inbox soon.';
+      newsletterMessage.className = 'newsletter-message success';
+      newsletterForm.reset();
+
+      setTimeout(function () {
+        newsletterMessage.textContent = '';
+        newsletterMessage.className = 'newsletter-message';
+      }, 6000);
+    });
+
+    if (newsletterInput) {
+      newsletterInput.addEventListener('input', function () {
+        newsletterInput.classList.remove('error');
+      });
+    }
+  }
+
+  /* ===== SOCIAL LINKS (Coming Soon) ===== */
+  var socialButtons = document.querySelectorAll('.social-links .social-btn');
+  socialButtons.forEach(function (btn) {
+    btn.addEventListener('click', function (event) {
+      event.preventDefault();
+      var platform = btn.getAttribute('aria-label') || 'Social';
+      showToast(platform.replace(' (coming soon)', '') + ' coming soon!');
+    });
+  });
+
+  /* ===== JOURNAL READ MORE (Coming Soon) ===== */
+  var journalButtons = document.querySelectorAll('.journal-card .btn[data-journal]');
+  journalButtons.forEach(function (btn) {
+    btn.addEventListener('click', function (event) {
+      event.preventDefault();
+      showToast('Full article coming soon!');
+    });
+  });
+
+  /* ===== SCROLL REVEAL ===== */
+  var reveals = document.querySelectorAll('.reveal');
+  if (reveals.length > 0) {
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      reveals.forEach(function (el) {
+        el.classList.add('visible');
+      });
+    } else {
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      reveals.forEach(function (el) {
+        observer.observe(el);
+      });
+    }
+  }
 
   /* ===== IMAGE ERROR HANDLING ===== */
   function setupImageErrorHandling(container) {
@@ -221,155 +401,16 @@
 
   setupImageErrorHandling();
 
-  /* ===== PREMIUM ANIMATIONS (GSAP + LENIS) ===== */
-  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if (!prefersReducedMotion && typeof gsap !== 'undefined') {
-    /* ---- Lenis smooth scroll ---- */
-    var lenis = new Lenis({ duration: 1.4, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }, wheelMultiplier: 1 });
-
-    if (typeof ScrollTrigger !== 'undefined') {
-      lenis.on('scroll', ScrollTrigger.update);
-      gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
-      gsap.ticker.lagSmoothing(0);
-    }
-
-    /* ---- Custom cursor ---- */
-    var cursorDot = document.getElementById('cursorDot');
-    var cursorRing = document.getElementById('cursorRing');
-    if (cursorDot && cursorRing) {
-      var cursorPos = { x: -100, y: -100 };
-      document.addEventListener('mousemove', function (e) {
-        cursorPos.x = e.clientX;
-        cursorPos.y = e.clientY;
-        cursorDot.style.transform = 'translate(' + (e.clientX - 4) + 'px, ' + (e.clientY - 4) + 'px)';
-      });
-      gsap.ticker.add(function () {
-        gsap.to(cursorRing, {
-          x: cursorPos.x - 20,
-          y: cursorPos.y - 20,
-          duration: 0.3,
-          ease: 'power2.out'
-        });
-      });
-    }
-
-    /* ---- Hero timeline ---- */
-    var heroTimeline = gsap.timeline({ defaults: { ease: 'power2.out' } });
-
-    heroTimeline
-      .from('.hero-line', { scaleY: 0, transformOrigin: 'top center', duration: 1.2 })
-      .from('.hero-eyebrow', { y: 20, opacity: 0, duration: 0.7 }, '-=0.7')
-      .from('.hero-heading', { y: 30, opacity: 0, duration: 0.8 }, '-=0.5');
-
-    if (typeof SplitType !== 'undefined') {
-      var headingEl = document.querySelector('.hero-heading');
-      if (headingEl) {
-        var split = new SplitType('.hero-heading', { types: 'words' });
-        heroTimeline.from(split.words, { y: 30, opacity: 0, duration: 0.6, stagger: 0.04 }, '-=0.3');
+  /* ===== SMOOTH SCROLL FOR ANCHOR LINKS (fallback) ===== */
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener('click', function (event) {
+      var href = anchor.getAttribute('href');
+      if (href === '#' || href === '#main-content') return;
+      var target = document.querySelector(href);
+      if (target) {
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    } else {
-      heroTimeline.from('.hero-heading', { y: 30, opacity: 0, duration: 0.8 }, '-=0.5');
-    }
-
-    heroTimeline
-      .from('.hero-description', { y: 20, opacity: 0, duration: 0.6 }, '-=0.3')
-      .from('.hero-cta', { y: 20, opacity: 0, duration: 0.6 }, '-=0.2')
-      .from('.scroll-indicator', { y: 15, opacity: 0, duration: 0.8 }, '-=0.2');
-
-    /* ---- Scroll-triggered animations ---- */
-    gsap.utils.toArray('.value-card').forEach(function (card, i) {
-      gsap.from(card, {
-        y: 40,
-        opacity: 0,
-        duration: 0.7,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: card,
-          start: 'top 85%',
-          toggleActions: 'play none none none'
-        }
-      });
     });
-
-    gsap.utils.toArray('.product-card').forEach(function (card, i) {
-      gsap.from(card, {
-        y: 30,
-        opacity: 0,
-        duration: 0.5,
-        ease: 'power2.out',
-        delay: i * 0.08,
-        scrollTrigger: {
-          trigger: card,
-          start: 'top 88%',
-          toggleActions: 'play none none none'
-        }
-      });
-    });
-
-    gsap.utils.toArray('.section-title, .section-header').forEach(function (el) {
-      gsap.from(el, {
-        y: 30,
-        opacity: 0,
-        duration: 0.7,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 88%',
-          toggleActions: 'play none none none'
-        }
-      });
-    });
-
-    gsap.utils.toArray('.custom-cta, .newsletter').forEach(function (el) {
-      gsap.from(el, {
-        y: 40,
-        opacity: 0,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 80%',
-          toggleActions: 'play none none none'
-        }
-      });
-    });
-
-    /* ---- Update anchor link scrolling to use Lenis ---- */
-    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-      anchor.addEventListener('click', function (event) {
-        var href = anchor.getAttribute('href');
-        if (href === '#' || href === '#main-content') return;
-        var target = document.querySelector(href);
-        if (target) {
-          event.preventDefault();
-          lenis.scrollTo(target, { offset: -80 });
-        }
-      });
-    });
-  } else {
-    /* ---- Reduced motion fallback ---- */
-    document.querySelectorAll('.hero-eyebrow, .hero-heading, .hero-description, .hero-cta').forEach(function (el) {
-      el.classList.add('visible');
-    });
-    /* ---- Scroll reveal fallback ---- */
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-      });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
-    /* ---- Anchor link scroll fallback ---- */
-    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-      anchor.addEventListener('click', function (event) {
-        var href = anchor.getAttribute('href');
-        if (href === '#' || href === '#main-content') return;
-        var target = document.querySelector(href);
-        if (target) {
-          event.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-  }
+  });
 })();
