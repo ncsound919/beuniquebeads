@@ -1,0 +1,39 @@
+beuniquebeads.com DNS Setup for GitHub Pages
+
+DELETE ALL EXISTING RECORDS FIRST
+
+Then add these records ONE AT A TIME:
+
+Record 1:
+Type: A
+Name: @
+Content: 185.199.108.153
+Proxy: OFF (Gray cloud)
+
+Record 2:
+Type: A
+Name: @
+Content: 185.199.109.153
+Proxy: OFF (Gray cloud)
+
+Record 3:
+Type: A
+Name: @
+Content: 185.199.110.153
+Proxy: OFF (Gray cloud)
+
+Record 4:
+Type: A
+Name: @
+Content: 185.199.111.153
+Proxy: OFF (Gray cloud)
+
+Record 5:
+Type: CNAME
+Name: www
+Content: ncsound.github.io
+Proxy: OFF (Gray cloud)
+
+AFTER ADDING ALL RECORDS:
+Go to SSL/TLS tab
+Set Encryption Mode to: Flexible

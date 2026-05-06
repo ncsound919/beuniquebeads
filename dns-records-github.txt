@@ -1,0 +1,34 @@
+beuniquebeads.com DNS Records (GitHub Pages)
+
+Delete ALL existing records first.
+
+Then add these 5 records:
+
+Type: A
+Name: @
+Content: 185.199.108.153
+Proxy: Gray (click cloud to turn gray)
+
+Type: A
+Name: @
+Content: 185.199.109.153
+Proxy: Gray
+
+Type: A
+Name: @
+Content: 185.199.110.153
+Proxy: Gray
+
+Type: A
+Name: @
+Content: 185.199.111.153
+Proxy: Gray
+
+Type: CNAME
+Name: www
+Content: ncsound.github.io
+Proxy: Gray
+
+===
+
+Then: SSL/TLS → Overview → set to "Flexible"
