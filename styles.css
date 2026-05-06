@@ -72,13 +72,6 @@ h1, h2, h3, h4 {
   margin: 0 auto 2rem;
 }
 
-.hero-cta {
-  display: flex;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .about-heading {
   font-size: clamp(2rem, 5vw, 3.3rem);
   margin: 1.4rem 0 2rem;
@@ -443,7 +436,7 @@ section {
   text-align: center;
   position: relative;
   z-index: 2;
-  min-height: calc(100vh - 8rem);
+  width: 100%;
 }
 
 .hero-badge {
@@ -463,8 +456,8 @@ section {
   display: flex;
   gap: 1.2rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
-
 
 
 /* ===== VALUES ===== */
@@ -1009,6 +1002,7 @@ section {
   section {
     padding: 5rem 0;
   }
+}
 
 @media (max-width: 768px) {
   .hero {
@@ -1068,20 +1062,6 @@ section {
 }
 
 @media (max-width: 480px) {
-  .floating-label {
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    white-space: nowrap;
-    font-size: 0.75rem;
-    padding: 0.4rem 1rem;
-  }
-
-  .hero-image {
-    border-radius: 2rem;
-  }
-
   .btn {
     padding: 13px 24px;
     font-size: 0.95rem;
