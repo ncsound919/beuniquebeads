@@ -107,37 +107,49 @@
           <a href="#contact" class="btn-text-link">Start a Custom Piece</a>
         </div>
       </div>
-      <div class="hero-visual">
+      <div class="hero-visual" id="heroVisual">
         <svg class="bead-cluster" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#D4B88A" stop-opacity="0.3"/>
+              <stop offset="0%" stop-color="#D4B88A" stop-opacity="0.25"/>
               <stop offset="100%" stop-color="#D4B88A" stop-opacity="0"/>
             </radialGradient>
             <filter id="glowFilter" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="8" result="blur"/>
+              <feGaussianBlur stdDeviation="6" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+            <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
               <feMerge>
                 <feMergeNode in="blur"/>
                 <feMergeNode in="SourceGraphic"/>
               </feMerge>
             </filter>
           </defs>
-          <circle class="halo" cx="200" cy="180" r="90" fill="url(#glow)"/>
-          <g class="beads">
-            <circle class="bead bead-1" cx="140" cy="120" r="32" fill="#722F37" filter="url(#glowFilter)"/>
-            <circle class="bead bead-2" cx="260" cy="100" r="28" fill="#1C1C1C" filter="url(#glowFilter)"/>
-            <circle class="bead bead-3" cx="320" cy="170" r="26" fill="#5A7247" filter="url(#glowFilter)"/>
-            <circle class="bead bead-4" cx="100" cy="210" r="30" fill="#C4A777" filter="url(#glowFilter)"/>
-            <circle class="bead bead-5" cx="220" cy="250" r="24" fill="#8B7355" filter="url(#glowFilter)"/>
-            <circle class="bead bead-6" cx="300" cy="260" r="22" fill="#D4B88A" filter="url(#glowFilter)"/>
+          <circle class="halo" cx="200" cy="180" r="100" fill="url(#glow)"/>
+          <g class="beads-group">
+            <circle class="bead bead-1" data-x="0" data-y="0" cx="130" cy="110" r="34" fill="#722F37" filter="url(#glowFilter)"/>
+            <circle class="bead bead-2" data-x="0" data-y="0" cx="270" cy="90" r="28" fill="#1C1C1C" filter="url(#glowFilter)"/>
+            <circle class="bead bead-3" data-x="0" data-y="0" cx="330" cy="160" r="24" fill="#5A7247" filter="url(#glowFilter)"/>
+            <circle class="bead bead-4" data-x="0" data-y="0" cx="90" cy="195" r="32" fill="#C4A777" filter="url(#glowFilter)"/>
+            <circle class="bead bead-5" data-x="0" data-y="0" cx="210" cy="240" r="26" fill="#8B7355" filter="url(#glowFilter)"/>
+            <circle class="bead bead-6" data-x="0" data-y="0" cx="295" cy="255" r="20" fill="#D4B88A" filter="url(#glowFilter)"/>
+            <circle class="bead bead-float" data-x="0" data-y="0" cx="185" cy="60" r="16" fill="#D4B88A" filter="url(#softGlow)" opacity="0.8"/>
+          </g>
+          <g class="stars">
+            <path class="star star-1" d="M340 100 L342 108 L350 108 L344 114 L346 122 L340 117 L334 122 L336 114 L330 108 L338 108 Z" fill="#D4B88A" opacity="0.5"/>
           </g>
           <g class="strings" stroke="#5C4633" stroke-width="1.5" fill="none" stroke-linecap="round">
-            <path class="string-1" d="M140 120 Q180 160 260 100" opacity="0.6"/>
-            <path class="string-2" d="M260 100 Q300 140 320 170" opacity="0.5"/>
-            <path class="string-3" d="M140 120 Q100 160 100 210" opacity="0.5"/>
-            <path class="string-4" d="M100 210 Q160 230 220 250" opacity="0.6"/>
-            <path class="string-5" d="M320 170 Q280 220 300 260" opacity="0.5"/>
-            <path class="string-6" d="M220 250 Q260 260 300 260" opacity="0.6"/>
+            <path class="string-1" d="M130 110 Q180 140 270 90" opacity="0.5"/>
+            <path class="string-2" d="M270 90 Q310 120 330 160" opacity="0.4"/>
+            <path class="string-3" d="M130 110 Q90 150 90 195" opacity="0.45"/>
+            <path class="string-4" d="M90 195 Q150 215 210 240" opacity="0.5"/>
+            <path class="string-5" d="M330 160 Q280 210 295 255" opacity="0.4"/>
+            <path class="string-6" d="M210 240 Q255 250 295 255" opacity="0.45"/>
+            <path class="string-float" d="M185 60 Q200 90 210 100" opacity="0.35" stroke-dasharray="2 4"/>
           </g>
         </svg>
       </div>

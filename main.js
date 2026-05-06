@@ -216,6 +216,50 @@
     }
   }
 
+  /* ===== HERO PARALLAX ON MOUSE ===== */
+  var heroVisual = document.getElementById('heroVisual');
+  var heroSection = document.querySelector('.hero');
+  if (heroVisual && heroSection && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var beads = heroVisual.querySelectorAll('.bead, .halo, .star');
+    var maxMove = 6;
+    var baseEasing = 0.08;
+
+    heroSection.addEventListener('mousemove', function (e) {
+      var rect = heroSection.getBoundingClientRect();
+      var centerX = rect.width / 2;
+      var centerY = rect.height / 2;
+      var mouseX = e.clientX - rect.left - centerX;
+      var mouseY = e.clientY - rect.top - centerY;
+      var normalizedX = mouseX / centerX;
+      var normalizedY = mouseY / centerY;
+
+      beads.forEach(function (bead, i) {
+        var depth = 0.3 + (i % 5) * 0.15;
+        var offsetX = normalizedX * maxMove * depth;
+        var offsetY = normalizedY * maxMove * depth;
+        var current = bead.style.transform;
+        if (current && current.includes('translate')) {
+          var match = current.match(/translate\(([-\d.]+)px,\s*([-\d.]+)px)/);
+          if (match) {
+            var existingX = parseFloat(match[1]);
+            var existingY = parseFloat(match[2]);
+            offsetX = existingX * (1 - baseEasing) + offsetX * baseEasing;
+            offsetY = existingY * (1 - baseEasing) + offsetY * baseEasing;
+          }
+        }
+        var translate = 'translate(' + offsetX.toFixed(1) + 'px, ' + offsetY.toFixed(1) + 'px)';
+        var scale = bead.classList.contains('bead') ? 'scale(1)' : '';
+        bead.style.transform = translate + (scale ? ' ' + scale : '');
+      });
+    });
+
+    heroSection.addEventListener('mouseleave', function () {
+      beads.forEach(function (bead) {
+        bead.style.transform = 'translate(0px, 0px)';
+      });
+    });
+  }
+
   /* ===== IMAGE ERROR HANDLING ===== */
   function setupImageErrorHandling(container) {
     if (!container) {
